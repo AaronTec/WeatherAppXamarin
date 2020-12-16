@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeatherApp.Day0">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="TextColor" Value="Black"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="" x:Name="lbl_date" Grid.Column="0" Grid.Row="0" FontSize="Large" />
+            <Button Text="Settings" Grid.Column="2" Grid.Row="0" />
+            <Label Text="" x:Name="lbl_theday"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" FontSize="50" />
+            <Label Text="18c" x:Name="lbl_Temp" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" FontSize="75" />
+
+            <Label Text="Max Temp" x:Name="lbl_dismax" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="HumRes" x:Name="lbl_maxtemp" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Label Text="Minimum Temp" x:Name="lbl_dismin" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="HumRes" x:Name="lbl_mintemp" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Label Text="Humididty" x:Name="lbl_disHumidity" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="HumRes" x:Name="lbl_humididty" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Label Text="UV Levels" x:Name="lbl_disUV" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="MMtempres" x:Name="lbl_UV" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Label Text="Description" x:Name="lbl_description" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="ltempres" x:Name="lbl_lowtemp" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Label Text="Feels like" x:Name="lbl_disFeelsLike" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="1" FontSize="30" />
+            <Label Text="ltempres" x:Name="lbl_feelsLike" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" FontSize="30" />
+
+            <Button Text="Tomorrow" Grid.Column="2" Grid.Row="9" />
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeatherApp.WeekdaysDisplay">
+    <ContentPage.Content>
+
+        <RelativeLayout x:Name="mainBg">
+            <Image x:Name="mainim" Aspect="AspectFill" Opacity="1" Source="Assets/backimage.png"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+            <Grid   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
+
+                <Grid>
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Source="Assets/back.png" Clicked="btn_back" Grid.Column="0" Grid.Row="0" />
+                    <Label Text="7 Day Forecast" x:Name="lbl_date" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" FontSize="Large" />
+                    <Label Text="Perth Sunday" x:Name="lbl_theday"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" FontSize="35" />
+                    <Label Text="18c" x:Name="lbl_Temp" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" FontSize="45" />
+                    <Image x:Name="iconindi" Grid.Column="0" Grid.Row="3"/>
+
+                    <Image Source="Assets/humidity.png" x:Name="lbl_disHumidity" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" />
+                    <Label Text="HumRes" x:Name="lbl_humididty" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" FontSize="35" />
+
+                    <Image Source="Assets/uvrays.png"  x:Name="lbl_disUV" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="1" />
+                    <Label Text="MMtempres" x:Name="lbl_UV" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="1" FontSize="35" />
+
+                    <Label Text="ltempres" x:Name="lbl_lowtemp" Grid.Column="2" Grid.Row="3" FontSize="35" Grid.RowSpan="3"/>
+
+                    <Image Source="Assets/wind.png" x:Name="lbl_disFeelsLike" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="1" />
+                    <Label Text="ltempres" x:Name="lbl_feelsLike" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="1" FontSize="35" />
+
+                    <Label Text="Rest of the week" x:Name="lbl_restof" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" FontSize="30" />
+
+                    <ListView x:Name="lst_view" Grid.Column="0" Grid.Row="9" Grid.RowSpan="4" Grid.ColumnSpan="3" ItemsSource="{Binding Dailylist}"
+                   HasUnevenRows="true"
+                   SeparatorVisibility="Default"
+                   SeparatorColor="Black"
+                   ItemTapped="OnItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame CornerRadius="25"  BorderColor="White" HasShadow="True">
+                                        <Grid Padding="1" RowSpacing="1" ColumnSpacing="10">
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding icons}" Grid.Row="0"/>
+                                            <Label TextColor="White" FontSize="Large" Grid.Column="1"
+                                       Text="{Binding tempreture}"
+                                       HorizontalOptions="Fill"  VerticalOptions="CenterAndExpand"/>
+                                            <Label TextColor="White" FontSize="Medium" Grid.Column="1"
+                                       Grid.Row="1"
+                                       VerticalOptions="Start"
+                                       Text="{Binding dt}"/>
+                                        </Grid>
+                                    </Frame>
+
+                                </ViewCell>
+                                <!-- <ViewCell Text="" TextColor="Black"/>-->
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+                </Grid>
+            </Grid>
+        </RelativeLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
