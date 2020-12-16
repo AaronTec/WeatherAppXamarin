@@ -1,5 +1,8 @@
 # WeatherAppXamarin
-In this school exercise we had to create a weather app that followed these guidlines
+
+A GitHub Portfolio would incomplete without a Weather app of some kind, so here it is!
+
+In this school exercise we had to create a weather app that followed these guidlines.
 
 • Connect to a web API to get the weather data.
 
