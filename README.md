@@ -19,7 +19,7 @@ of some sort but it’s up to you what you put where.
 
 • Be well tested
 
-I decided that I wanted to add a couple of more feature that would make this App more useful.
+I decided that I wanted to add a couple of more features that would make this App more useful.
 
 • Display the forecast for the next week
 
