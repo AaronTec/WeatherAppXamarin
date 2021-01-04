@@ -161,45 +161,6 @@ namespace WeatherApp
                 Application.Current.Properties["NightMode"] = false;
             }
 
-
-
-            //else if ((bool)Application.Current.Properties.ContainsKey("NightMode"))
-            //{
-            //    backcolMain.BackgroundColor = Color.FromHex("000000");
-            //    lbl_date.TextColor = System.Drawing.Color.White;
-            //    btn_col.BackgroundColor = System.Drawing.Color.Gray;
-            //    lbl_theday.TextColor = System.Drawing.Color.White;
-            //    lbl_Temp.TextColor = System.Drawing.Color.White;
-            //    lbl_disHumidity.TextColor = System.Drawing.Color.White;
-            //    lbl_humididty.TextColor = System.Drawing.Color.White;
-            //    lbl_disUV.TextColor = System.Drawing.Color.White;
-            //    lbl_UV.TextColor = System.Drawing.Color.White;
-            //    lbl_description.TextColor = System.Drawing.Color.White;
-            //    lbl_lowtemp.TextColor = System.Drawing.Color.White;
-            //    lbl_disFeelsLike.TextColor = System.Drawing.Color.White;
-            //    lbl_feelsLike.TextColor = System.Drawing.Color.White;
-            //    lbl_disHumidity.TextColor = System.Drawing.Color.White;
-
-
-            //}
-            //else if(!(bool)Application.Current.Properties.ContainsKey("NightMode"))
-            //{
-            //    backcolMain.BackgroundColor = Color.FromHex("FFFFFF");
-            //    lbl_date.TextColor = System.Drawing.Color.Black;
-            //    btn_col.BackgroundColor = System.Drawing.Color.Black;
-            //    lbl_theday.TextColor = System.Drawing.Color.Black;
-            //    lbl_Temp.TextColor = System.Drawing.Color.Black;
-            //    lbl_disHumidity.TextColor = System.Drawing.Color.Black;
-            //    lbl_humididty.TextColor = System.Drawing.Color.Black;
-            //    lbl_disUV.TextColor = System.Drawing.Color.Black;
-            //    lbl_UV.TextColor = System.Drawing.Color.Black;
-            //    lbl_description.TextColor = System.Drawing.Color.Black;
-            //    lbl_lowtemp.TextColor = System.Drawing.Color.Black;
-            //    lbl_disFeelsLike.TextColor = System.Drawing.Color.Black;
-            //    lbl_feelsLike.TextColor = System.Drawing.Color.Black;
-            //    lbl_disHumidity.TextColor = System.Drawing.Color.Black;
-            //}
-
             if (!Application.Current.Properties.ContainsKey("city_select"))// checks Dict what city is selected.
             {
                 Application.Current.Properties["city_select"] = 0;
@@ -235,10 +196,6 @@ namespace WeatherApp
 
 
             }
-
-            //bool night = (bool)Application.Current.Properties.ContainsKey("NightMode"));
-
-
         }
 
 
