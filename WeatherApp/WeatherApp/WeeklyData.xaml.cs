@@ -27,7 +27,7 @@ namespace WeatherApp
 
             try
             {
-                var response = await client.GetAsync("https://api.openweathermap.org/data/2.5/onecall?lat=31.9505&lon=115.8605&exclude=minutely,hourly,alerts&appid=1bad879db855abb9d741aa0a8d0ffcba");
+                var response = await client.GetAsync("https://api.openweathermap.org/data/2.5/onecall?lat=31.9505&lon=115.8605&exclude=minutely,hourly,alerts&appid=[REDACTED]");
 
                 var responseString = await response.Content.ReadAsStringAsync();
 
