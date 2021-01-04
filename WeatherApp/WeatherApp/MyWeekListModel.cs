@@ -50,7 +50,7 @@ namespace WeatherApp
             string contents;
 
             using (var wc = new System.Net.WebClient())
-                contents = wc.DownloadString("https://api.openweathermap.org/data/2.5/onecall?lat=" + lati + "&lon=" + longy + "&exclude=minutely,hourly,alerts&appid=1bad879db855abb9d741aa0a8d0ffcba");
+                contents = wc.DownloadString("https://api.openweathermap.org/data/2.5/onecall?lat=" + lati + "&lon=" + longy + "&exclude=minutely,hourly,alerts&appid=[REDACTED]");
 
 
             WeatherClass.Rootobject thedata = JsonConvert.DeserializeObject<WeatherClass.Rootobject>(contents);
